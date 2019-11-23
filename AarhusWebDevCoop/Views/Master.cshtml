@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+	Layout = null;
+}
+<!DOCTYPE HTML>
+<html lang="EN" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web dev coop">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Andreas Knudsen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body class="h-100 w-100 d-flex flex-column">
+    <div class="container flex-grow-1">
+        <header>
+            @Umbraco.RenderMacro("mainMenu")
+        </header>
+        <div class="container justify-content-center">
+            @RenderBody()
+        </div>
+    </div>
+    <footer id="footer" class="bg-dark text-white-50 text-center p-3">
+        @Model.Value("footer")
+    </footer>
+    
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    
+</body>
+</html>
